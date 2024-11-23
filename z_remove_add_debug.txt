@@ -1,0 +1,12 @@
+
+
+
+
+
+find . -type f -name "*.py" -exec sed -i '1i from z_local_debuger import debug_info as debugger_by_aslam' {} +
+
+
+
+find . -name "*.py" -exec sed -i '/from z_local_debuger import debug_info as debugger_by_aslam/d' {} \; && find . -name "*.py" -exec sed -i '/debugger_by_aslam/d' {} \;
+
+
